@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+
+    <link rel="stylesheet" href="css/ticket.css">
+
+    <script src="js/Chart.bundle.js"></script>
+    <script src="js/jquery%203.3.1.js"></script>
+    <script src="js/ticket.js"></script>
+
+
+</head>
+<body onload="verify()">
+<div id="mainn">
+    <div id="dashboard">
+    <header>
+        <h2 style="font-family:Lato"><a href="" onclick="windows.reset()"><span id="spin" style="margin-right: 20px"></span></a><span>&nbsp; &nbsp; &nbsp;GBOMOSO MEGA CINEMA </span></h2>
+    </header>
+    <div class="inside">
+    <div class="allocator">
+        <h3>Seat Allocator</h3>
+    <br />
+        <h4 class="h41">Enter Seat Number</h4>
+        <input type="number" min="1" name="no2" id="no2">
+        <h4 class="h42">Enter Viewer's Name</h4>
+        <input type="text" name="naming" id="naming" onkeyup="viewerName()">
+        <br />
+        <input type="button" value="Allocate Seat" id="allocatee" class="buttons" onclick="allocator()" style="text-align: left;width: auto">
+    </div>
+
+        <div class="allocator">
+            <h3 style="margin-top: 20px">Enter Number <br />of Seats</h3>
+            <br />
+            <input type="number"  min="1" name="no1" id="no1" style="background-color: white;height: 50px"/>
+            <br />
+            <input type="button"  id="arranger" name="arranger"  value="Arrange Seats" onclick="arrangeSeat()">
+            <br />
+            <input type="button" value="Print Seats Arrangement" id="printseat" class="buttons" onclick="printseats()">
+        </div>
+
+        <div class="allocator">
+            <h3>Ticket Printing</h3>
+            <br />
+            <h4 class="h41">Print New Ticket</h4>
+            <input type="button" value="Print Ticket" id="printt" onclick="printer()"  class="buttons" style="margin-top: -20px">
+
+            <h4 class="h42">Print For Seat</h4>
+            <input type="number" id="pfor" min="1" name="pfor">
+            <br />
+            <input type="button" value="Print Ticket" id="printfor" class="buttons" onclick="printfor()">
+        </div>
+
+    </div>
+    </div>
+
+    <br /><br/>
+<div id="cinemaHall"></div>
+    <div id="canvasMain" style="width: 500px;height: 300px;margin-left: 30%;background-color: white" >
+        <canvas id="chartDisplay"></canvas>
+    </div>
+</div>
+<div id="printingd"></div>
+
+</body>
+</html>
